@@ -1,1 +1,255 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fundamentals of Cyber Forensics | Exam Notes</title>
+
+<style>
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Website Background */
+
+body {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    color: #1A1A1A;
+
+    background-color: #F4F7FA;
+    background-image: url("background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 740px;
+    text-align: center;
+}
+
+/* Subject Image */
+
+.subject-image {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 28px;
+}
+
+.subject-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Unit Cards */
+
+.units {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.unit-card {
+    display: block;
+
+    background: rgba(250, 250, 247, 0.96);
+    border: 1px solid #DCE3E8;
+    border-radius: 10px;
+
+    padding: 22px 24px;
+
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+
+    transition: 0.2s ease;
+}
+
+.unit-card:hover {
+    border-color: #102A43;
+    background: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 16px rgba(16, 42, 67, 0.10);
+}
+
+.unit-card:focus-visible {
+    outline: 2px solid #102A43;
+    outline-offset: 3px;
+}
+
+.unit-number {
+    display: block;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #607080;
+    margin-bottom: 8px;
+
+    white-space: nowrap;
+}
+
+.unit-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #102A43;
+    line-height: 1.35;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 16px;
+        background-attachment: scroll;
+    }
+
+    .subject-image {
+        max-width: 270px;
+        margin-bottom: 22px;
+    }
+
+    .subject-image img {
+        max-height: 280px;
+    }
+
+    .units {
+        gap: 12px;
+    }
+
+    .unit-card {
+        padding: 17px 18px;
+    }
+
+    .unit-number {
+        margin-bottom: 6px;
+        font-size: 11px;
+    }
+
+    .unit-title {
+        font-size: 17px;
+    }
+}
+
+/* Short Screen Adjustment */
+
+@media (max-height: 700px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .subject-image {
+        max-width: 210px;
+        margin-bottom: 16px;
+    }
+
+    .unit-card {
+        padding: 14px 18px;
+    }
+
+    .units {
+        gap: 10px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main class="container">
+
+    <!-- Main Subject Image -->
+
+    <div class="subject-image">
+
+        <img
+            src="forensics.png"
+            alt="Fundamentals of Cyber Forensics - Exam Oriented Question and Answers"
+        >
+
+    </div>
+
+    <!-- Unit Navigation -->
+
+    <nav class="units" aria-label="Course Units">
+
+        <!-- Unit 1 -->
+
+        <a href="unit1/index.html" class="unit-card">
+
+            <span class="unit-number">
+                UNIT I
+            </span>
+
+            <div class="unit-title">
+                Introduction to Computer Forensics
+            </div>
+
+        </a>
+
+        <!-- Unit 2 -->
+
+        <a href="unit2/index.html" class="unit-card">
+
+            <span class="unit-number">
+                UNIT II
+            </span>
+
+            <div class="unit-title">
+                Computer Forensic Analysis and Information Warfare
+            </div>
+
+        </a>
+
+        <!-- Unit 3 -->
+
+        <a href="unit3/index.html" class="unit-card">
+
+            <span class="unit-number">
+                UNIT III
+            </span>
+
+            <div class="unit-title">
+                Cyber Crime Investigation and Legal Issues
+            </div>
+
+        </a>
+
+    </nav>
+
+</main>
+
+</body>
+</html>
+
