@@ -36,6 +36,8 @@
     margin-bottom: 0;
 }
 
+/* Topic Cards */
+
 .topic-list {
     display: flex;
     flex-direction: column;
@@ -67,6 +69,11 @@
     border-color: #9CB6C9;
 }
 
+.topic-card:focus-visible {
+    outline: 2px solid #16466B;
+    outline-offset: 3px;
+}
+
 .topic-text {
     font-size: 17px;
     line-height: 1.55;
@@ -78,6 +85,8 @@
     font-size: 20px;
     color: #607080;
 }
+
+/* Mobile Layout */
 
 @media (max-width: 600px) {
 
@@ -132,7 +141,7 @@
 
         <a href="../index.html">Home</a>
 
-        <a href="../unit1/index.html" class="active"
+        <a href="index.html" class="active"
            aria-current="page">Unit I</a>
 
         <a href="../unit2/index.html">Unit II</a>
@@ -147,63 +156,63 @@
 
         <a href="t1.html" class="topic-card">
             <span class="topic-text">
-                Topic 1. Computer Forensics Fundamentals
+                1. Computer Forensics Fundamentals
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
 
         <a href="t2.html" class="topic-card">
             <span class="topic-text">
-                Topic 2. Types of Computer Forensics Technology
+                2. Types of Computer Forensics Technology
+            </span>
+            <span class="topic-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a href="t3.html" class="topic-card">
+            <span class="topic-text">
+                3. Types of Computer Forensics Systems
+            </span>
+            <span class="topic-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a href="t4.html" class="topic-card">
+            <span class="topic-text">
+                4. Vendor and Computer Forensics Services
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
 
         <a href="t5.html" class="topic-card">
             <span class="topic-text">
-                Topic 5. Evidence Collection
+                5. Evidence Collection
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
 
         <a href="t6.html" class="topic-card">
             <span class="topic-text">
-                Topic 6. Data Recovery
+                6. Data Recovery
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
 
         <a href="t7.html" class="topic-card">
             <span class="topic-text">
-                Topic 7. Data Seizure
+                7. Data Seizure
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
 
         <a href="t8.html" class="topic-card">
             <span class="topic-text">
-                Topic 8. Duplication of Digital Evidence
+                8. Duplication and Preservation of Digital Evidence
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
 
         <a href="t9.html" class="topic-card">
             <span class="topic-text">
-                Topic 9. Preservation of Digital Evidence
-            </span>
-            <span class="topic-arrow" aria-hidden="true">›</span>
-        </a>
-
-        <a href="t10.html" class="topic-card">
-            <span class="topic-text">
-                Topic 10. Computer Image Verification
-            </span>
-            <span class="topic-arrow" aria-hidden="true">›</span>
-        </a>
-
-        <a href="t11.html" class="topic-card">
-            <span class="topic-text">
-                Topic 11. Authentication
+                9. Computer Image Verification and Authentication
             </span>
             <span class="topic-arrow" aria-hidden="true">›</span>
         </a>
@@ -218,7 +227,7 @@
 
             <a href="../index.html">Home</a>
 
-            <a href="../unit1/index.html" class="active"
+            <a href="index.html" class="active"
                aria-current="page">Unit I</a>
 
             <a href="../unit2/index.html">Unit II</a>
