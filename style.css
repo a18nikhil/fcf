@@ -1,0 +1,543 @@
+
+/* =========================================
+   FUNDAMENTALS OF CYBER FORENSICS
+   Shared Website Stylesheet
+   ========================================= */
+
+
+/* 1. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.75;
+
+    color: #1A1A1A;
+    background-color: #F4F7FA;
+    background-image: url("background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow-wrap: break-word;
+}
+
+a {
+    color: #16466B;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 2. MAIN PAGE CONTAINER */
+
+.container {
+    width: calc(100% - 36px);
+    max-width: 780px;
+
+    margin: 35px auto;
+    padding: 35px 38px;
+
+    background: #FAFAF7;
+    border-radius: 8px;
+
+    box-shadow: 0 3px 20px rgba(16, 42, 67, 0.07);
+}
+
+
+/* 3. PAGE HEADER */
+
+.page-header {
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.page-header h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    color: #102A43;
+
+    margin-bottom: 12px;
+}
+
+.page-header .subtitle {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #607080;
+}
+
+
+/* 4. UNIT NAVIGATION */
+
+.unit-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+    margin: 22px 0 30px;
+}
+
+.unit-nav a {
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    text-decoration: none;
+    color: #102A43;
+
+    background: #F0F4F7;
+    border: 1px solid #DCE3E8;
+    border-radius: 5px;
+
+    transition: background 0.2s ease;
+}
+
+.unit-nav a:hover {
+    background: #DDEAF3;
+}
+
+.unit-nav a.active,
+.unit-nav a[aria-current="page"] {
+    background: #102A43;
+    color: #FFFFFF;
+    border-color: #102A43;
+}
+
+
+/* 5. QUESTION LIST - UNIT INDEX */
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+.question-card {
+    display: block;
+
+    padding: 17px 20px;
+
+    color: #102A43;
+    background: #FFFFFF;
+
+    border: 1px solid #E0E5E9;
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.question-card:hover {
+    background: #F1F6FA;
+    border-color: #9CB6C9;
+}
+
+.question-number {
+    font-weight: bold;
+    color: #16466B;
+    margin-right: 5px;
+}
+
+
+/* 6. ANSWER PAGE */
+
+.answer {
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.answer h1 {
+    font-size: 27px;
+    line-height: 1.4;
+
+    color: #102A43;
+    margin-bottom: 24px;
+}
+
+.answer h2 {
+    font-size: 21px;
+    line-height: 1.4;
+
+    color: #102A43;
+
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.answer h3 {
+    font-size: 18px;
+    line-height: 1.5;
+
+    color: #243F55;
+
+    margin-top: 20px;
+    margin-bottom: 9px;
+}
+
+.answer p {
+    margin-bottom: 15px;
+}
+
+.answer ul,
+.answer ol {
+    margin: 10px 0 20px;
+    padding-left: 25px;
+}
+
+.answer li {
+    margin-bottom: 8px;
+}
+
+.answer li::marker {
+    color: #526F85;
+}
+
+.answer strong {
+    color: #243F55;
+}
+
+
+/* 7. DIAGRAMS AND IMAGES */
+
+.answer figure {
+    margin: 22px auto;
+    text-align: center;
+}
+
+.answer figure img,
+.answer > img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    margin: 18px auto;
+
+    border-radius: 5px;
+}
+
+.answer figcaption {
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #607080;
+    text-align: center;
+}
+
+.diagram {
+    margin: 20px auto;
+    padding: 18px 12px;
+
+    text-align: center;
+
+    background: #F3F6F8;
+    border: 1px solid #DCE3E8;
+    border-radius: 6px;
+}
+
+.diagram img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 8. TABLES */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    margin: 20px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.answer table {
+    width: 100%;
+    border-collapse: collapse;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.answer th,
+.answer td {
+    border: 1px solid #CCD6DE;
+    padding: 10px 12px;
+
+    text-align: left;
+    vertical-align: top;
+}
+
+.answer th {
+    background: #EAF0F5;
+    color: #102A43;
+    font-weight: bold;
+}
+
+.answer td {
+    background: #FFFFFF;
+}
+
+
+/* 9. CODE BLOCKS */
+
+.answer pre {
+    margin: 18px 0;
+    padding: 16px;
+
+    background: #F0F3F5;
+    border: 1px solid #DCE3E8;
+    border-radius: 6px;
+
+    overflow-x: auto;
+
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+
+    white-space: pre;
+}
+
+.answer code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+
+/* 10. SIMPLE INFORMATION BOX */
+
+.note-box {
+    margin: 20px 0;
+    padding: 15px 18px;
+
+    background: #F1F5F8;
+    border-left: 3px solid #7894AA;
+
+    border-radius: 3px;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* 11. DIVIDERS */
+
+hr {
+    border: none;
+    border-top: 1px solid #E0E5E9;
+
+    margin: 26px 0;
+}
+
+
+/* 12. BOTTOM NAVIGATION */
+
+.bottom-nav {
+    margin-top: 35px;
+    padding-top: 15px;
+
+    border-top: 1px solid #E0E5E9;
+}
+
+.bottom-nav .unit-nav {
+    margin: 10px 0 0;
+}
+
+
+/* 13. KEYBOARD FOCUS */
+
+a:focus-visible {
+    outline: 2px solid #16466B;
+    outline-offset: 3px;
+}
+
+
+/* 14. TABLET LAYOUT */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: calc(100% - 30px);
+        margin: 20px auto;
+        padding: 27px 25px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .answer h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* 15. MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+
+        background-attachment: scroll;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+
+        margin: 12px auto;
+        padding: 24px 19px;
+
+        border-radius: 7px;
+    }
+
+    .page-header {
+        margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+        line-height: 1.35;
+    }
+
+    .page-header .subtitle {
+        font-size: 14px;
+    }
+
+    .unit-nav {
+        flex-wrap: nowrap;
+        gap: 6px;
+
+        margin: 18px 0 24px;
+    }
+
+    .unit-nav a {
+        flex: 1;
+        min-width: 0;
+
+        padding: 9px 5px;
+
+        font-size: 11px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .question-list {
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .question-card {
+        padding: 14px 15px;
+
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .answer {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .answer h1 {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    .answer h2 {
+        font-size: 19px;
+        margin-top: 24px;
+    }
+
+    .answer h3 {
+        font-size: 17px;
+        margin-top: 18px;
+    }
+
+    .answer p {
+        margin-bottom: 13px;
+    }
+
+    .answer ul,
+    .answer ol {
+        padding-left: 22px;
+    }
+
+    .answer table {
+        font-size: 13px;
+    }
+
+    .answer th,
+    .answer td {
+        padding: 8px 9px;
+    }
+
+    .answer pre {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .diagram {
+        padding: 12px 8px;
+    }
+
+    .note-box {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+}
+
+
+/* 16. ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
