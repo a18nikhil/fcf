@@ -18,7 +18,7 @@
     max-width: 780px;
 }
 
-/* Back Button */
+/* Back Navigation */
 
 .back-link {
     display: inline-flex;
@@ -37,6 +37,11 @@
     color: #102A43;
 }
 
+.back-link:focus-visible {
+    outline: 2px solid #16466B;
+    outline-offset: 3px;
+}
+
 /* Page Heading */
 
 .page-header {
@@ -48,7 +53,7 @@
     display: block;
 
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.5px;
 
@@ -100,7 +105,7 @@
     text-align: left;
 }
 
-/* Small Topic Number */
+/* Topic Number */
 
 .topic-number {
     display: block;
@@ -127,6 +132,18 @@
     white-space: nowrap;
 }
 
+/* Medium Titles */
+
+.topic-card.medium-title .topic-title {
+    font-size: 14px;
+}
+
+/* Long Titles */
+
+.topic-card.long-title .topic-title {
+    font-size: 12px;
+}
+
 /* Arrow */
 
 .topic-arrow {
@@ -137,7 +154,7 @@
     color: #82909C;
 }
 
-/* Bottom Back Button */
+/* Bottom Back Navigation */
 
 .bottom-back {
     margin-top: 32px;
@@ -172,21 +189,21 @@
     }
 
     .topic-number {
-        font-size: 10px;
+        font-size: 11px;
         margin-bottom: 5px;
     }
 
     .topic-title {
-        font-size: clamp(10px, 2.8vw, 14px);
-        line-height: 1.5;
-        letter-spacing: -0.2px;
+        font-size: 16px;
     }
 
-    /* Longer Topic Names */
+    .topic-card.medium-title .topic-title {
+        font-size: 14px;
+    }
 
     .topic-card.long-title .topic-title {
-        font-size: clamp(8px, 2.15vw, 11px);
-        letter-spacing: -0.35px;
+        font-size: 12px;
+        letter-spacing: -0.3px;
     }
 
     .topic-arrow {
@@ -199,20 +216,25 @@
     }
 }
 
-/* Very Small Phones */
+/* Small Phone Adjustment */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
 
     .topic-card {
-        padding: 13px 9px;
+        padding: 14px 10px;
+        gap: 4px;
     }
 
     .topic-title {
-        font-size: 11px;
+        font-size: 15px;
+    }
+
+    .topic-card.medium-title .topic-title {
+        font-size: 12.5px;
     }
 
     .topic-card.long-title .topic-title {
-        font-size: 7.5px;
+        font-size: 10px;
         letter-spacing: -0.4px;
     }
 }
@@ -267,7 +289,7 @@
 
         <!-- Topic 2 -->
 
-        <a href="t2.html" class="topic-card">
+        <a href="t2.html" class="topic-card medium-title">
 
             <div class="topic-content">
                 <span class="topic-number">TOPIC 2</span>
