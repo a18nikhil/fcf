@@ -6,19 +6,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unit I - Introduction to Computer Forensics | FCF</title>
+<title>Unit I Topics | Fundamentals of Cyber Forensics</title>
 
 <link rel="stylesheet" href="../style.css">
 
 <style>
 
-/* Unit I Page Styling */
+/* Unit I Page */
 
 .unit-container {
     max-width: 780px;
 }
 
-/* Back Navigation */
+/* Back Button */
 
 .back-link {
     display: inline-flex;
@@ -31,60 +31,45 @@
 
     color: #607080;
     text-decoration: none;
-
-    transition: color 0.2s ease;
 }
 
 .back-link:hover {
     color: #102A43;
 }
 
-.back-link:focus-visible {
-    outline: 2px solid #16466B;
-    outline-offset: 4px;
-}
-
-/* Page Header */
+/* Page Heading */
 
 .page-header {
     text-align: center;
-    margin: 27px 0 30px;
+    margin: 30px 0 28px;
 }
 
-.page-header .unit-label {
+.unit-label {
     display: block;
 
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.5px;
 
     color: #82909C;
-    margin-bottom: 13px;
 }
 
-.page-header h1 {
-    font-size: 29px;
-    line-height: 1.35;
-    color: #102A43;
-    margin-bottom: 0;
-}
-
-/* Topic Cards */
+/* Topic List */
 
 .topic-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
-
-    margin-top: 25px;
 }
+
+/* Topic Cards */
 
 .topic-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
 
     padding: 17px 20px;
 
@@ -92,8 +77,8 @@
     border: 1px solid #E0E5E9;
     border-radius: 7px;
 
-    text-decoration: none;
     color: #102A43;
+    text-decoration: none;
 
     transition: background 0.2s ease,
                 border-color 0.2s ease;
@@ -115,6 +100,8 @@
     text-align: left;
 }
 
+/* Small Topic Number */
+
 .topic-number {
     display: block;
 
@@ -127,25 +114,30 @@
     margin-bottom: 6px;
 }
 
+/* Topic Title */
+
 .topic-title {
     display: block;
 
-    font-size: 17px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.5;
     font-weight: normal;
 
     color: #102A43;
+    white-space: nowrap;
 }
+
+/* Arrow */
 
 .topic-arrow {
     flex-shrink: 0;
 
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #82909C;
 }
 
-/* Bottom Back Navigation */
+/* Bottom Back Button */
 
 .bottom-back {
     margin-top: 32px;
@@ -159,31 +151,24 @@
 @media (max-width: 600px) {
 
     .unit-container {
-        padding: 23px 19px;
+        padding: 22px 15px;
     }
 
     .page-header {
-        margin: 25px 0 27px;
+        margin: 25px 0;
     }
 
-    .page-header .unit-label {
-        font-size: 11px;
-        margin-bottom: 11px;
-    }
-
-    .page-header h1 {
-        font-size: 24px;
-        line-height: 1.4;
+    .unit-label {
+        font-size: 12px;
     }
 
     .topic-list {
         gap: 10px;
-        margin-top: 20px;
     }
 
     .topic-card {
-        padding: 15px 16px;
-        gap: 10px;
+        padding: 15px 12px;
+        gap: 5px;
     }
 
     .topic-number {
@@ -192,17 +177,43 @@
     }
 
     .topic-title {
-        font-size: 16px;
-        line-height: 1.55;
+        font-size: clamp(10px, 2.8vw, 14px);
+        line-height: 1.5;
+        letter-spacing: -0.2px;
+    }
+
+    /* Longer Topic Names */
+
+    .topic-card.long-title .topic-title {
+        font-size: clamp(8px, 2.15vw, 11px);
+        letter-spacing: -0.35px;
     }
 
     .topic-arrow {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .bottom-back {
         margin-top: 27px;
         padding-top: 16px;
+    }
+}
+
+/* Very Small Phones */
+
+@media (max-width: 360px) {
+
+    .topic-card {
+        padding: 13px 9px;
+    }
+
+    .topic-title {
+        font-size: 11px;
+    }
+
+    .topic-card.long-title .topic-title {
+        font-size: 7.5px;
+        letter-spacing: -0.4px;
     }
 }
 
@@ -232,10 +243,6 @@
         <span class="unit-label">
             UNIT I TOPICS
         </span>
-
-        <h1>
-            Introduction to Computer Forensics
-        </h1>
 
     </header>
 
@@ -320,7 +327,7 @@
 
         <!-- Topic 8 -->
 
-        <a href="t8.html" class="topic-card">
+        <a href="t8.html" class="topic-card long-title">
 
             <div class="topic-content">
                 <span class="topic-number">TOPIC 8</span>
@@ -335,7 +342,7 @@
 
         <!-- Topic 9 -->
 
-        <a href="t9.html" class="topic-card">
+        <a href="t9.html" class="topic-card long-title">
 
             <div class="topic-content">
                 <span class="topic-number">TOPIC 9</span>
