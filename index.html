@@ -6,11 +6,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fundamentals of Cyber Forensics | Exam Notes</title>
+<title>Fundamentals of Cyber Forensics | FCF</title>
 
 <style>
 
-/* General Reset */
+/* =========================================
+   FCF HOMEPAGE
+   Burgundy & Copper Gold Theme
+   ========================================= */
+
+/* Global Reset */
 
 * {
     margin: 0;
@@ -18,18 +23,37 @@
     box-sizing: border-box;
 }
 
-/* Website Background */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Georgia, Cambria, "Times New Roman", serif;
-    color: #1A1A1A;
+    color: #F8F1E8;
 
-    background-color: #F4F7FA;
-    background-image: url("background.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #21151D;
+
+    background-image:
+        linear-gradient(
+            rgba(198, 149, 103, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(198, 149, 103, 0.045) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            ellipse at 25% 20%,
+            #482737 0%,
+            #2E1B29 45%,
+            #21151D 100%
+        );
+
+    background-size:
+        58px 58px,
+        58px 58px,
+        cover;
 
     min-height: 100vh;
     min-height: 100dvh;
@@ -38,7 +62,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    padding: 35px 20px;
 }
 
 /* Main Container */
@@ -46,65 +70,126 @@ body {
 .container {
     width: 100%;
     max-width: 740px;
+    margin: 0 auto;
+}
+
+/* Subject Heading */
+
+.header {
     text-align: center;
+    margin-bottom: 70px;
 }
 
-/* Subject Image */
+.header h1 {
+    font-size: clamp(36px, 6vw, 55px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.5px;
 
-.subject-image {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto 28px;
+    color: #E8BE91;
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
-.subject-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 350px;
-    object-fit: contain;
-    border-radius: 8px;
+/* Gold Divider */
+
+.title-divider {
+    width: 110px;
+    height: 2px;
+
+    margin: 30px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #D9A66D,
+        transparent
+    );
 }
 
-/* Unit Cards */
+/* Unit Cards Container */
 
 .units {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 22px;
 }
 
+/* Unit Cards */
+
 .unit-card {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    background: rgba(250, 250, 247, 0.96);
-    border: 1px solid #DCE3E8;
-    border-radius: 10px;
+    min-height: 170px;
 
-    padding: 22px 24px;
+    padding: 38px 25px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(91, 49, 65, 0.96),
+        rgba(53, 29, 43, 0.98)
+    );
+
+    border: 1px solid rgba(220, 168, 116, 0.14);
+    border-radius: 17px;
 
     text-align: center;
     text-decoration: none;
     color: inherit;
 
-    transition: background 0.2s ease,
-                border-color 0.2s ease,
-                transform 0.2s ease;
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
 }
 
+/* Gold Accent Line */
+
+.unit-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 5px;
+
+    background: linear-gradient(
+        to bottom,
+        #E8BE91,
+        #B77B4E
+    );
+}
+
+/* Card Hover */
+
 .unit-card:hover {
-    border-color: #102A43;
-    background: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 16px rgba(16, 42, 67, 0.10);
+    transform: translateY(-3px);
+
+    border-color: rgba(232, 190, 145, 0.45);
+
+    background: linear-gradient(
+        135deg,
+        #67394E,
+        #402536
+    );
 }
 
 .unit-card:focus-visible {
-    outline: 2px solid #102A43;
-    outline-offset: 3px;
+    outline: 2px solid #E8BE91;
+    outline-offset: 4px;
 }
 
 /* Unit Number */
@@ -113,25 +198,46 @@ body {
     display: block;
 
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 1px;
 
-    color: #607080;
-    margin-bottom: 8px;
+    letter-spacing: 2.5px;
+    color: #D9A66D;
 
-    text-align: center;
-    white-space: nowrap;
+    margin-bottom: 22px;
 }
 
 /* Unit Title */
 
 .unit-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #102A43;
-    line-height: 1.35;
-    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    color: #FFF8F1;
+
+    max-width: 600px;
+}
+
+/* Tablet Layout */
+
+@media (max-width: 768px) {
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .header h1 {
+        font-size: 46px;
+    }
+
+    .unit-card {
+        min-height: 165px;
+    }
+
+    .unit-title {
+        font-size: 23px;
+    }
 }
 
 /* Mobile Layout */
@@ -139,63 +245,74 @@ body {
 @media (max-width: 600px) {
 
     body {
-        padding: 16px;
-        background-attachment: scroll;
+        padding: 30px 18px;
     }
 
-    .subject-image {
-        max-width: 270px;
-        margin-bottom: 22px;
+    .header {
+        margin-bottom: 55px;
     }
 
-    .subject-image img {
-        max-height: 280px;
+    .header h1 {
+        font-size: clamp(35px, 9vw, 46px);
+        line-height: 1.2;
+    }
+
+    .title-divider {
+        width: 95px;
+        margin-top: 27px;
     }
 
     .units {
-        gap: 12px;
+        gap: 17px;
     }
 
     .unit-card {
-        padding: 17px 18px;
+        min-height: 150px;
+        padding: 30px 20px;
+        border-radius: 14px;
     }
 
     .unit-number {
-        margin-bottom: 6px;
-        font-size: 11px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
     }
 
     .unit-title {
-        font-size: 17px;
+        font-size: 21px;
         line-height: 1.4;
     }
 }
 
-/* Short Screen Adjustment */
+/* Small Phones */
 
-@media (max-height: 700px) {
+@media (max-width: 380px) {
 
     body {
-        align-items: flex-start;
+        padding: 25px 14px;
     }
 
-    .subject-image {
-        max-width: 210px;
-        margin-bottom: 16px;
+    .header h1 {
+        font-size: 33px;
     }
 
     .unit-card {
-        padding: 14px 18px;
+        min-height: 140px;
+        padding: 25px 16px;
     }
 
-    .units {
-        gap: 10px;
+    .unit-title {
+        font-size: 19px;
     }
 }
 
-/* Accessibility */
+/* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
 
     *,
     *::before,
@@ -212,22 +329,25 @@ body {
 
 <main class="container">
 
-    <!-- Main Subject Image -->
+    <!-- Subject Heading -->
 
-    <div class="subject-image">
+    <header class="header">
 
-        <img
-            src="forensics.png"
-            alt="Fundamentals of Cyber Forensics - Exam Oriented Question and Answers"
-        >
+        <h1>
+            Fundamentals of<br>
+            Cyber Forensics
+        </h1>
 
-    </div>
+        <div class="title-divider"
+             aria-hidden="true"></div>
+
+    </header>
 
     <!-- Unit Navigation -->
 
     <nav class="units" aria-label="Course Units">
 
-        <!-- Unit 1 -->
+        <!-- Unit I -->
 
         <a href="unit1/index.html" class="unit-card">
 
@@ -241,7 +361,7 @@ body {
 
         </a>
 
-        <!-- Unit 2 -->
+        <!-- Unit II -->
 
         <a href="unit2/index.html" class="unit-card">
 
@@ -255,7 +375,7 @@ body {
 
         </a>
 
-        <!-- Unit 3 -->
+        <!-- Unit III -->
 
         <a href="unit3/index.html" class="unit-card">
 
