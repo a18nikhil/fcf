@@ -10,12 +10,7 @@
 
 <style>
 
-/* =========================================
-   FCF HOMEPAGE
-   Burgundy & Copper Gold Theme
-   ========================================= */
-
-/* Global Reset */
+/* GLOBAL RESET */
 
 * {
     margin: 0;
@@ -26,6 +21,8 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* BACKGROUND */
 
 body {
     font-family: Georgia, Cambria, "Times New Roman", serif;
@@ -58,14 +55,10 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 35px 20px;
+    padding: 65px 20px 35px;
 }
 
-/* Main Container */
+/* MAIN CONTAINER */
 
 .container {
     width: 100%;
@@ -73,32 +66,29 @@ body {
     margin: 0 auto;
 }
 
-/* Subject Heading */
+/* SUBJECT HEADING */
 
 .header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
 }
 
 .header h1 {
-    font-size: clamp(36px, 6vw, 55px);
+    font-size: 43px;
     font-weight: 700;
-    line-height: 1.18;
-    letter-spacing: -0.5px;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
 
     color: #E8BE91;
-
-    text-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
-/* Gold Divider */
+/* GOLD DIVIDER */
 
 .title-divider {
-    width: 110px;
+    width: 100px;
     height: 2px;
 
-    margin: 30px auto 0;
+    margin: 24px auto 0;
 
     background: linear-gradient(
         90deg,
@@ -108,15 +98,13 @@ body {
     );
 }
 
-/* Unit Cards Container */
+/* UNIT CARDS */
 
 .units {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 17px;
 }
-
-/* Unit Cards */
 
 .unit-card {
     position: relative;
@@ -126,9 +114,8 @@ body {
     align-items: center;
     justify-content: center;
 
-    min-height: 170px;
-
-    padding: 38px 25px;
+    min-height: 145px;
+    padding: 27px 22px;
 
     background: linear-gradient(
         135deg,
@@ -137,7 +124,7 @@ body {
     );
 
     border: 1px solid rgba(220, 168, 116, 0.14);
-    border-radius: 17px;
+    border-radius: 14px;
 
     text-align: center;
     text-decoration: none;
@@ -150,11 +137,10 @@ body {
 
     transition:
         transform 0.2s ease,
-        background 0.2s ease,
         border-color 0.2s ease;
 }
 
-/* Gold Accent Line */
+/* GOLD ACCENT */
 
 .unit-card::before {
     content: "";
@@ -173,18 +159,11 @@ body {
     );
 }
 
-/* Card Hover */
+/* HOVER */
 
 .unit-card:hover {
-    transform: translateY(-3px);
-
+    transform: translateY(-2px);
     border-color: rgba(232, 190, 145, 0.45);
-
-    background: linear-gradient(
-        135deg,
-        #67394E,
-        #402536
-    );
 }
 
 .unit-card:focus-visible {
@@ -192,121 +171,115 @@ body {
     outline-offset: 4px;
 }
 
-/* Unit Number */
+/* UNIT NUMBER */
 
 .unit-number {
     display: block;
 
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
+    letter-spacing: 2px;
 
-    letter-spacing: 2.5px;
     color: #D9A66D;
-
-    margin-bottom: 22px;
+    margin-bottom: 15px;
 }
 
-/* Unit Title */
+/* UNIT TITLE */
 
 .unit-title {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.35;
 
     color: #FFF8F1;
-
     max-width: 600px;
 }
 
-/* Tablet Layout */
+/* TABLET */
 
 @media (max-width: 768px) {
 
-    .header {
-        margin-bottom: 60px;
+    body {
+        padding-top: 55px;
     }
 
     .header h1 {
-        font-size: 46px;
-    }
-
-    .unit-card {
-        min-height: 165px;
+        font-size: 39px;
     }
 
     .unit-title {
-        font-size: 23px;
+        font-size: 20px;
     }
 }
 
-/* Mobile Layout */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 30px 18px;
+        padding: 55px 18px 30px;
     }
 
     .header {
-        margin-bottom: 55px;
+        margin-bottom: 40px;
     }
 
     .header h1 {
-        font-size: clamp(35px, 9vw, 46px);
+        font-size: 36px;
         line-height: 1.2;
     }
 
     .title-divider {
-        width: 95px;
-        margin-top: 27px;
+        width: 90px;
+        margin-top: 22px;
     }
 
     .units {
-        gap: 17px;
+        gap: 14px;
     }
 
     .unit-card {
-        min-height: 150px;
-        padding: 30px 20px;
-        border-radius: 14px;
+        min-height: 125px;
+        padding: 23px 18px;
+        border-radius: 13px;
     }
 
     .unit-number {
-        font-size: 12px;
-        letter-spacing: 2px;
-        margin-bottom: 18px;
+        font-size: 11px;
+        letter-spacing: 1.7px;
+        margin-bottom: 12px;
     }
 
     .unit-title {
-        font-size: 21px;
-        line-height: 1.4;
+        font-size: 18px;
+        line-height: 1.35;
     }
 }
 
-/* Small Phones */
+/* SMALL PHONES */
 
 @media (max-width: 380px) {
 
     body {
-        padding: 25px 14px;
+        padding: 45px 14px 25px;
     }
 
     .header h1 {
-        font-size: 33px;
+        font-size: 32px;
     }
 
     .unit-card {
-        min-height: 140px;
-        padding: 25px 16px;
+        min-height: 115px;
+        padding: 20px 14px;
     }
 
     .unit-title {
-        font-size: 19px;
+        font-size: 17px;
     }
 }
 
-/* Reduced Motion */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -329,7 +302,7 @@ body {
 
 <main class="container">
 
-    <!-- Subject Heading -->
+    <!-- SUBJECT TITLE -->
 
     <header class="header">
 
@@ -343,11 +316,11 @@ body {
 
     </header>
 
-    <!-- Unit Navigation -->
+    <!-- UNIT NAVIGATION -->
 
     <nav class="units" aria-label="Course Units">
 
-        <!-- Unit I -->
+        <!-- UNIT I -->
 
         <a href="unit1/index.html" class="unit-card">
 
@@ -361,7 +334,7 @@ body {
 
         </a>
 
-        <!-- Unit II -->
+        <!-- UNIT II -->
 
         <a href="unit2/index.html" class="unit-card">
 
@@ -375,7 +348,7 @@ body {
 
         </a>
 
-        <!-- Unit III -->
+        <!-- UNIT III -->
 
         <a href="unit3/index.html" class="unit-card">
 
